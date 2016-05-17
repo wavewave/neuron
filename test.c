@@ -12,12 +12,9 @@ void print(  int* c )
 
 }
 
-void neuron ( int *a, int *b )
+void multiply ( int *a, int *b, int *c )
 {
 
-  // int a[10][10];
-  // int b[10][10];
-  int c[100]; 
   
   for( int i = 0 ; i < 10 ; i++ ) {
     for( int j =0 ;  j < 10 ; j++ ) {
@@ -27,12 +24,12 @@ void neuron ( int *a, int *b )
       }
     }
   }
-  print( c );
 }
+
 
 int main( int argc, char** argv )
 {
-  int a[10][10], b[10][10];
+  int a[10][10], b[10][10], c[10][10];
   
   for( int i = 0 ; i< 10 ;i++ ) {
     for( int j = 0 ; j < 10 ; j++ ) {
@@ -41,7 +38,8 @@ int main( int argc, char** argv )
     }
   }
 
-  neuron( (int*)a, (int*)b) ;
+  multiply( (int*)a, (int*)b, (int*)c) ;
+  print( (int*)c );
 
 
   printf("Hello there.\n"); 
