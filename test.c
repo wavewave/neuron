@@ -1,6 +1,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+void print(  int* c )
+{
+  for( int i = 0 ; i < 10 ; i++ ) {
+    for( int j = 0 ; j < 10 ; j++ ) {
+      printf("%d ", c[10*i+j]);
+    }
+    printf("\n");
+  }
+
+}
+
 void neuron ( int *a, int *b )
 {
 
@@ -16,12 +27,7 @@ void neuron ( int *a, int *b )
       }
     }
   }
-  for( int i = 0 ; i < 10 ; i++ ) {
-    for( int j = 0 ; j < 10 ; j++ ) {
-      printf("%d ", c[10*i+j]);
-    }
-    printf("\n");
-  }
+  print( c );
 }
 
 int main( int argc, char** argv )
